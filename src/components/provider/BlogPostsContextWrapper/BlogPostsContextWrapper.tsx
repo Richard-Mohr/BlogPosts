@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {BlogPostContext, BlogPostContextSortType} from "../../../context/BlogPostContext";
 import {Post, User} from "../../../server-actions/BlogPostsTypes";
-import {fetchAllPosts} from "../../../server-actions/BlogPostsServerActions";
+import {fetchAllPosts, fetchAllUsers} from "../../../server-actions/BlogPostsServerActions";
 
 interface BlogPostsContextWrapperProps {
     children?: React.ReactNode
@@ -25,11 +25,9 @@ export const BlogPostsContextWrapper = (props: BlogPostsContextWrapperProps): JS
     }, [])
     
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then((response) => response.json())
-            .then((fetchedUsers) => {
-                setUsers(fetchedUsers)
-            });
+        fetchAllUsers().then(fetchedUsers => {
+            setUsers(fetchedUsers)
+        })
     }, [])
 
     const addPost = (post: Post) => {

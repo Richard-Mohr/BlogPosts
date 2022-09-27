@@ -1,4 +1,4 @@
-import {Comment, Post} from "./BlogPostsTypes";
+import {Comment, Post, User} from "./BlogPostsTypes";
 import {
     CREATE_SINGLE_POST,
     DELETE_SINGLE_POST,
@@ -86,6 +86,17 @@ export const fetchComments = async (postId: string): Promise<Comment[]> => {
         .then((response) => response.json())
         .then((createdPost) => {
             return createdPost
+        })
+        .catch(() => alert("Something went wrong. Please try again later."));
+}
+
+// Server calls for users.
+
+export const fetchAllUsers = async (): Promise<User[]> => {
+    return fetch('https://jsonplaceholder.typicode.com/users')
+        .then((response) => response.json())
+        .then((fetchedUsers) => {
+            return fetchedUsers
         })
         .catch(() => alert("Something went wrong. Please try again later."));
 }

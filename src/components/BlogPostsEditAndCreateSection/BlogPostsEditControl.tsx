@@ -14,7 +14,22 @@ export const BlogPostsEditControl = (props: BlogPostsEditControlProps): JSX.Elem
     const [title, setTitle] = useState<string>(props.title)
     const [body, setBody] = useState<string>(props.body)
 
+    const [showInfo, setShowInfo] = useState<boolean>(false)
+
+    const onSubmit = () => {
+        if(body.trim() === "" || title.trim() === "") {
+            setShowInfo(true)
+            return
+        }
+        props.onSubmit(title.trim(), body.trim())
+    }
+
     return <>
+        {showInfo &&
+            <div>
+                Neither the title nor the body can be empty.
+            </div>
+        }
         <textarea
             className={"edit-section-title"}
             placeholder={"Title"}
@@ -34,13 +49,12 @@ export const BlogPostsEditControl = (props: BlogPostsEditControlProps): JSX.Elem
             maxLength={1000}
         />
         <div className={"edit-section-footer"}>
-            <Link
-                to={HOMEPAGE}
+            <button
                 className={"edit-section-button primary"}
-                onClick={() => props.onSubmit(title, body)}
+                onClick={onSubmit}
             >
                 Save Post
-            </Link>
+            </button>
             <Link to={HOMEPAGE} className={"edit-section-button"}>
                 Cancel
             </Link>

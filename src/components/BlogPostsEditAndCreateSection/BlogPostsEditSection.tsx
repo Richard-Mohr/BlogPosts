@@ -21,8 +21,8 @@ export const BlogPostsEditSection = (): JSX.Element => {
         updateSinglePost({
             id: post.id,
             userId: post.id,
-            title: newTitle,
-            body: newBody
+            title: newTitle.trim(),
+            body: newBody.trim()
         }).then(updatedPost => {
             editPost(updatedPost)
         })

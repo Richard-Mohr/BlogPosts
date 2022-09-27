@@ -15,7 +15,7 @@ export const BlogPostsCreateSection = (): JSX.Element => {
     const onSubmit = (newTitle: string, newBody: string) => {
         // The user ID of the creator. Using 1 for demo purposes since I don't have a user login.
         const userId = 1
-        createSinglePost(newTitle, newBody, userId).then((createdPost) => {
+        createSinglePost(newTitle.trim(), newBody.trim(), userId).then((createdPost) => {
             addPost(createdPost)
             navigate(HOMEPAGE)
         })

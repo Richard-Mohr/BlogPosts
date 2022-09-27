@@ -23,7 +23,7 @@ export const BlogPostsSearchBar = (): JSX.Element => {
             navigate(HOMEPAGE)
             return
         }
-        navigate(SEARCH + searchText)
+        navigate(SEARCH + searchText.trim())
     }
 
     return <div className={"search-bar-wrapper"}>
