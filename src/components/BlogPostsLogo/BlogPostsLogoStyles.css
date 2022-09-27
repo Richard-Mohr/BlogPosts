@@ -1,0 +1,24 @@
+.logo-wrapper {
+    max-height: var(--logo-size);
+    display: flex;
+    align-items: center;
+    padding-left: var(--header-padding-outwards);
+    padding-right: var(--header-padding-inwards);
+
+
+    /* Styles for the logo. These can be changed/removed if you use an image source for your logo instead of an text. */
+    font-weight: bolder;
+    font-size: calc(var(--logo-size) * 0.8);
+    white-space: nowrap;
+    color: var(--text-color);
+}
+
+@media (min-width: 1144px) {
+    .logo-wrapper {
+        padding-right: 1.4em;
+    }
+}
+
+.logo-wrapper:hover {
+    cursor: pointer;
+}

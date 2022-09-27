@@ -1,0 +1,21 @@
+.header-controls-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: var(--header-controls-gap);
+    padding-right: var(--header-padding-outwards);
+    padding-left: var(--header-padding-inwards);
+}
+
+.header-control {
+    background: none;
+    border: none;
+    aspect-ratio: 1;
+}
+
+.header-control svg {
+    color: var(--secondary-text-color);
+}
+
+.header-control:hover {
+    background-color: var(--highlight-color);
+}

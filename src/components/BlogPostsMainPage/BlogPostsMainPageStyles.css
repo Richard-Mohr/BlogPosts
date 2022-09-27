@@ -1,0 +1,14 @@
+.main-page-wrapper {
+    width: 100%;
+    max-width: var(--max-content-width);
+    min-height: 100vh;
+    margin: auto;
+}
+
+.main-page-content {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-between-posts);
+    padding-top: var(--header-height);
+}

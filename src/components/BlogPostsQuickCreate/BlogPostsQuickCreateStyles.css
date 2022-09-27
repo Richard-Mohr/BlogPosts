@@ -1,0 +1,11 @@
+.quick-create-control {
+    border-radius: var(--button-border-radius);
+    padding: var(--quick-create-padding);
+    resize: none;
+    background-color: var(--secondary-color);
+}
+
+.quick-create-control:hover,
+.quick-create-control:focus-within {
+    background-color: var(--primary-color);
+}
