@@ -1,0 +1,32 @@
+.sorting-control {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    justify-content: space-between;
+}
+
+select[id="sort-type"] {
+    background: none;
+    border: none;
+    color:  var(--text-color);
+    font-size: 1em;
+}
+
+select[id="sort-type"] > option {
+    background: var(--primary-color);
+}
+
+.compact-view-toggle {
+    background: none;
+    color: var(--text-color);
+    border: none;
+}
+
+.compact-view-toggle > span {
+    font-size: 1.1em;
+}
+
+.compact-view-toggle:hover {
+    cursor: pointer;
+    background: var(--highlight-color);
+}

@@ -1,0 +1,26 @@
+.posts-actions-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--post-action-gap);
+}
+
+.posts-action-button {
+    background: transparent;
+    border: none;
+    height: var(--post-action-height);
+    min-width: var(--post-title-font-size);
+    display: flex;
+    align-items: center;
+    gap: var(--post-action-gap);
+    color: var(--text-color);
+}
+
+.posts-action-button:hover {
+    background: var(--highlight-color);
+}
+
+.posts-action-icon {
+    height: var(--post-action-icon-size);
+    width: var(--post-action-icon-size);
+}

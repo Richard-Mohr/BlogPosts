@@ -1,0 +1,19 @@
+.header-wrapper {
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-content {
+    width: 100%;
+    max-width: var(--max-content-width);
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,33 @@
+.post-card {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: var(--post-padding);
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap: var(--post-padding);
+}
+
+.post-card.compact {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post-card-title {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--post-padding) / 2);
+}
+
+.post-card-title h3 {
+    margin: 0;
+    font-size: var(--post-title-font-size);
+}
+
+.post-card-title p {
+    color: var(--secondary-text-color);
+}
+
+.post-card p {
+    margin: 0;
+}

@@ -1,0 +1,28 @@
+.search-bar-wrapper {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    max-width: var(--max-search-bar-width);
+    padding: 0 var(--site-padding);
+}
+
+.search-bar-form {
+    height: 2em;
+    width: 100%;
+    display: flex;
+}
+
+.search-bar-text-field {
+    flex-grow: 1;
+    display: flex;
+    padding: 0 0.5em;
+    background: none;
+    border: 2px solid var(--secondary-color);
+    color: var(--text-color);
+}
+
+.search-submit-button {
+    background: none;
+    border: 2px solid var(--secondary-color);
+}
